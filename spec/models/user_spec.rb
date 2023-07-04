@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
+RSpec.describe User, type: :model do
   describe 'POST #create' do
     context 'when password and password_confirmation match' do
       it 'creates a new user' do
@@ -129,5 +129,66 @@ RSpec.describe UsersController, type: :controller do
         expect(user.errors.full_messages).to include('Password is too short (minimum is 8 characters)')
       end
     end
+  end
+
+  describe '.authenticate_with_credentials' do
+    context 'if authenticate succeed' do
+      it 'returns the correct user when email and password match' do
+        existing_user = User.create(
+          name: 'John Doe',
+          email: 'test@test.com',
+          password: 'password123',
+          password_confirmation: 'password123'
+        )
+
+        authenticated_user = User.authenticate_with_credentials('test@test.com', 'password123')
+        # expect the authenticated user is equivalent to the existing user
+        expect(authenticated_user).to eq(existing_user)
+      end
+    end
+
+    context 'if authentication fails' do
+      it 'returns nil when password does not match' do
+        existing_user = User.create(
+          name: 'John Doe',
+          email: 'test@test.com',
+          password: 'password123',
+          password_confirmation: 'password123'
+        )
+    
+        authenticated_user = User.authenticate_with_credentials('test@test.com', 'wrong_password')
+        # expect the authenticated user to be nil when the password does not match
+        expect(authenticated_user).to be_nil
+      end
+    end
+
+    context 'even if there is space in email' do
+      it 'authenticate and return the correct user' do
+        existing_user = User.create(
+          name: 'John Doe',
+          email: 'test@test.com',
+          password: 'password123',
+          password_confirmation: 'password123'
+        )
+
+        authenticated_user = User.authenticate_with_credentials('    test@test.com    ', 'password123')
+        expect(authenticated_user).to eq(existing_user)
+      end
+    end
+
+    context 'even if there is wrong case in email' do
+      it 'authenticate and return the correct user' do
+        existing_user = User.create(
+          name: 'John Doe',
+          email: 'test@test.com',
+          password: 'password123',
+          password_confirmation: 'password123'
+        )
+
+        authenticated_user = User.authenticate_with_credentials('TEST@tesT.cOM', 'password123')
+        expect(authenticated_user).to eq(existing_user)
+      end
+    end
+
   end
 end
