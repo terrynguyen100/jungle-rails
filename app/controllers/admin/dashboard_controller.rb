@@ -1,8 +1,4 @@
-class Admin::DashboardController < ApplicationController
-  
-
-  # include HttpAuthConcern
-  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD']
+class Admin::DashboardController < Admin::BaseController
 
   def show
     @product_count = Product.count
