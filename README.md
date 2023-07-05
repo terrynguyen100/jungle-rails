@@ -1,11 +1,10 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1.
+A mini e-commerce application built with Rails 6.1 with User and Admin authentications.
 
 # Features
 
 ## Home Page
-
 ![](https://github.com/terrynguyen100/jungle-rails/blob/573e793bd35e7e3c1fedf294fe9da8c4627d3bb4/doc/1_Homepage.gif)
 
 ## User Registration and Log In / Log Out
