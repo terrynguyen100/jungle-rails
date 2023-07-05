@@ -2,28 +2,28 @@
 
 A mini e-commerce application built with Rails 6.1 with User and Admin authentications.
 
-# Features
+## Features
 
-## Home Page
+### 1. Home Page
 ![](doc/1_Homepage.gif)
 
-## User Registration and Log In / Log Out
+### 2. User Registration and Log In / Log Out
 Including features such as hashed password with bcrypt, validations for existing email, password and confirmed password matching
 ![](doc/2_Registration-Log-In.gif)
 
-## Different Categories of Products
+### 3. Different Categories of Products
 ![](doc/3_Categories.gif)
 
-## Add-To-Cart and Purchasing
+### 4. Add-To-Cart and Purchasing
 Including features such as disabling sold out products, online payment with Stripe, Order page after completing purchase
 ![](doc/4_Purchase.gif)
 
-## Admin Authentication with HTTP Basic Auth
+### 5. Admin Authentication with HTTP Basic Auth
 Please use User: `Jungle`, Password: `book`
 Including features such as: dashboard, managing all current products, managing all current categories
 ![](doc/5_Admin.gif)
 
-## Unit and Integration Testing with Cypress
+### 6. Unit and Integration Testing with Cypress
 ![](doc/6_CypressTesting.jpg)
 
 ## Setup
