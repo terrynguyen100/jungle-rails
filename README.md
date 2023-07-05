@@ -9,19 +9,20 @@ A mini e-commerce application built with Rails 6.1.
 ![](https://github.com/terrynguyen100/jungle-rails/blob/573e793bd35e7e3c1fedf294fe9da8c4627d3bb4/doc/1_Homepage.gif)
 
 ## User Registration and Log In / Log Out
-### Including features such as hashed password with bcrypt, validations for existing email, password and confirmed password matching
+Including features such as hashed password with bcrypt, validations for existing email, password and confirmed password matching
+![](https://github.com/terrynguyen100/jungle-rails/blob/e8568e072c732b6348e8f8c73ff1438983befa23/doc/2_Registration-Log-In.gif)
 
 ## Different Categories of Products
+![](https://github.com/terrynguyen100/jungle-rails/blob/e8568e072c732b6348e8f8c73ff1438983befa23/doc/3_Categories.gif)
 
 ## Add-To-Cart and Purchasing
-### Including features such as disabling sold out products, online payment with Stripe, Order page after completing purchase
+Including features such as disabling sold out products, online payment with Stripe, Order page after completing purchase
+![](https://github.com/terrynguyen100/jungle-rails/blob/e8568e072c732b6348e8f8c73ff1438983befa23/doc/4_Purchase.gif)
 
 ## Admin Authentication with HTTP Basic Auth
-### Please use User: `Jungle`, Password: `book`
-
-## Admin Dashboard
-## Including features such as: dashboard, managing all current products, managing all current categories
-
+Please use User: `Jungle`, Password: `book`
+Including features such as: dashboard, managing all current products, managing all current categories
+![](https://github.com/terrynguyen100/jungle-rails/blob/e8568e072c732b6348e8f8c73ff1438983befa23/doc/5_Admin.gif)
 
 ## Setup
 
