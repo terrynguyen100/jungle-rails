@@ -23,6 +23,9 @@ Please use User: `Jungle`, Password: `book`
 Including features such as: dashboard, managing all current products, managing all current categories
 ![](doc/5_Admin.gif)
 
+## Unit and Integration Testing with Cypress
+![](doc/6_CypressTesting.jpg)
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
