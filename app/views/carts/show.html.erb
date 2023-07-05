@@ -6,7 +6,7 @@
 
   <% if (enhanced_cart.length == 0)%>
     <div class="alert alert-primary" role="alert">
-      There is no item in the cart.
+      There is no item in the cart. <%= link_to "Go to Homepage", root_path %>
     </div>
   <% else %>
     <div class="panel panel-default items">
